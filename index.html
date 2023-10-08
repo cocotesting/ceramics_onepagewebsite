@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Ceramics by Jack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body onload="window.addEventListener('resize', setPanels); setPanels();">
+    <div>
+        <p class="heading">ceramics</p>
+    </div>
+    <div class="title">
+        <img class="top" src="assets/categories/categories-01.png" alt="ceramics"/>
+        <img class="btm" src="assets/categories/categories-02.png" alt="ceramics"/>
+    </div>
+
+    <div class="categories">
+        <div>
+            <img id="top1" class="main top" src="assets/categories/categories-05.png" alt="experiments"/>
+            <img id="btm1" class="main btm" src="assets/categories/categories-06.png" alt="experiments"/>
+        </div>
+        <div>
+            <img id="top2" class="main top" src="assets/categories/categories-07.png" alt="imperfections"/>
+            <img id="mid2" class="main top2" src="assets/categories/categories-08.png" alt="imperfections"/>
+            <img id="btm2"class="main btm" src="assets/categories/categories-09.png" alt="imperfections"/>
+        </div>
+        <div>
+            <img id="top3" class="main top" src="assets/categories/categories-12.png" alt="textures"/>
+            <img id="btm3" class="main btm" src="assets/categories/categories-13.png" alt="textures"/>
+        </div>
+        <div>
+            <img id="top4" class="main top" src="assets/categories/categories-10.png" alt="colours"/>
+            <img id="btm4" class="main btm" src="assets/categories/categories-11.png" alt="colours"/>
+        </div>
+        <div>
+            <img id="top5" class="main top" src="assets/categories/categories-03.png" alt="curves"/>
+            <img id="btm5" class="main btm" src="assets/categories/categories-04.png" alt="curves"/>
+        </div>
+        <div>
+            <img id="t1" class="top title2" src="assets/categories/categories-05.png" alt="experiments"/>
+            <img id="b1" class="btm title2" src="assets/categories/categories-06.png" alt="experiments"/>
+        </div>
+        <div>
+            <img id="t2" class="top title2" src="assets/categories/categories-07.png" alt="imperfections"/>
+            <img id="m2" class="top2 title2" src="assets/categories/categories-08.png" alt="imperfections"/>
+            <img id="b2" class="btm title2" src="assets/categories/categories-09.png" alt="imperfections"/>
+        </div>
+        <div>
+            <img id="t3" class="top title2" src="assets/categories/categories-12.png" alt="textures"/>
+            <img id="b3" class="btm title2" src="assets/categories/categories-13.png" alt="textures"/>
+        </div>
+        <div>
+            <img id="t4" class="top title2" src="assets/categories/categories-10.png" alt="colours"/>
+            <img id="b4" class="btm title2" src="assets/categories/categories-11.png" alt="colours"/>
+        </div>
+        <div>
+            <img id="t5" class="top title2" src="assets/categories/categories-03.png" alt="curves"/>
+            <img id="b5" class="btm title2" src="assets/categories/categories-04.png" alt="curves"/>
+        </div>
+    </div>
+
+    <div class="catphoto">
+        <div id="photo1" class="scrollFade photo">
+        </div>
+        <div id="photo2" class="scrollFade photo">
+        </div>
+        <div id="photo3" class="scrollFade photo">
+        </div>
+        <div id="photo4" class="scrollFade photo">
+        </div>
+        <div id="photo5" class="scrollFade photo">
+        </div>
+    </div>
+
+    <div class="rhsgif marginA">
+        <div class="gifphoto">
+        </div>
+    </div>
+
+
+    <div id="carousel">
+        <div class="slide" id="">
+            <p id="cat3">textures,</p>
+        </div>
+        <div class="slide" id="">
+            <p id="cat4">colours,</p>
+        </div>
+        <div class="slide" id="">
+            <p id="cat5">curves,</p>
+        </div>
+        <div class="slide" id="">
+            <p id="cat1" >experiments,</p>  
+        </div>
+        <div class="slide" id="">
+            <p id="cat2">imperfections,</p>
+        </div>
+    </div>
+
+    <div id="mocarousel">
+        <div class="slide" id="slide1">
+            <p id="cat1" >experiments,</p>  
+        </div>
+        <div class="slide" id="slide2">
+            <p id="cat2">imperfections,</p>
+        </div>
+        <div class="slide" id="slide3">
+            <p id="cat3">textures,</p>
+        </div>
+        <div class="slide" id="slide4">
+            <p id="cat4">colours,</p>
+        </div>
+        <div class="slide" id="slide5">
+            <p id="cat5">curves,</p>
+        </div>
+    </div>
+
+
+    <section id="index" class="marginA">
+        <div id="ind1" class="grid"></div>  
+        <div id="ind2" class="grid"></div>  
+        <div id="ind3" class="grid"></div>  
+        <div id="ind4" class="grid"></div>  
+        <div id="ind5" class="grid"></div>  
+    </section>
+    
+    <div id="expDetail"></div>
+    <div id="impDetail"></div>
+    <div id="textDetail"></div>
+    <div id="colDetail"></div>
+    <div id="curDetail"></div>
+    
+    <div>
+        <p class="subtitle" id="sub1">experiments<span id="expno" class="no"></span></p>  
+        <p class="subtitle" id="sub2">imperfections<span id="impno" class="no"></span></p>
+        <p class="subtitle" id="sub3">textures<span id="textno" class="no"></span></p>  
+        <p class="subtitle" id="sub4">colours<span id="colno" class="no"></span></p>
+        <p class="subtitle" id="sub5">curves<span id="curno" class="no"></span></p>
+    </div>
+
+    <div>
+        <p class="subtitle" id="tit1">experiments<span id="expmo" class="no"></span></p>  
+        <p class="subtitle" id="tit2">imperfections<span id="impmo" class="no"></span></p>
+        <p class="subtitle" id="tit3">textures<span id="textmo" class="no"></span></p>  
+        <p class="subtitle" id="tit4">colours<span id="colmo" class="no"></span></p>
+        <p class="subtitle" id="tit5">curves<span id="curmo" class="no"></span></p>
+    </div>
+
+    <p id="jack" class="jack"><span class="ceramics">ceramics </span>by jack</p>
+
+
+    <div class="bg">
+        <div class="bgphoto"></div>
+    </div>
+    <p class="hi" onClick="window.location.reload();">say hi</p>
+    <div class="contact">
+        <p class="small web">IG. sample</p>
+        <p class="small mobile">IG. sample<br>E. sample-at-gmail.com<br>T. 0000-0000</p>
+        <div>if you are interested,<br> contact me</div>
+        <div class="contactgrid">
+            <p class="small">E. sample-at-gmail.com</p>
+            <p class="small">T. 0000-0000</p>
+        </div>
+    </div>
+
+
+    <div id="back1" onclick="back1()"></div>
+    <embed id="back" class="back" src="assets/icons/previous.svg" >
+
+
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/details.js"></script>
+
+</body>
